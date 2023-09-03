@@ -3,13 +3,34 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: '',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
+
+  {
+    path: 'formulario',
+    loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
+  },
+  {
+    path: 'cursos',
+    loadChildren: () => import('./pages/cursos/cursos.module').then( m => m.CursosPageModule)
+  },
+  {
+    path: 'isesion',
+    loadChildren: () => import('./pages/isesion/isesion.module').then( m => m.IsesionPageModule)
   },
 ];
 

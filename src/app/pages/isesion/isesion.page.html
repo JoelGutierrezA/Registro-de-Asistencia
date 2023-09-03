@@ -1,0 +1,39 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingresa tus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form #formulario="ngForm">
+        <ion-list>
+            <ion-item>
+              <ion-label position="floating">Email: </ion-label>
+              <ion-input type="email" placeholder="ju.perez@duocuc.cl"
+                    name="email" [(ngModel)]="sesion.email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password: </ion-label>
+              <ion-input type="password" placeholder="asdf1234"
+                    name="password" [(ngModel)]="sesion.password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button routerLink="/action-sheet" expand="block" fill="solid" color="success" shape="round"
+        >Ingresar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <ion-text class="olvido" color="danger">
+    <h6>¿Olvidaste tu contraseña?</h6>
+  </ion-text>
+</ion-content>

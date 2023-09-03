@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cursos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-text color="primary">
+    <h5>Seleccione un curso</h5>
+  </ion-text>
+  <ion-button expand="full" routerLink="/cursos">Prog. App. Móviles (010V)</ion-button>
+  <ion-button expand="full">Prog. App. Móviles (013V)</ion-button>
+  <ion-button expand="full">Prog. App. Móviles (012V)</ion-button>
+  <ion-button expand="full">Arquitectura (019V)</ion-button>
+</ion-content>
