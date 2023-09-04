@@ -18,7 +18,7 @@ export class AppComponent {
   componentes : Componente[] = [
     {
       name: 'Home',
-      redirecTo: '/inicio',
+      redirecTo: '/home',
       icon: 'home-outline'
     },
     {
@@ -27,9 +27,9 @@ export class AppComponent {
       icon: 'library-outline'
     },
     {
-      name: 'Alert',
-      redirecTo: '/alert',
-      icon: 'bug-outline'
+      name: 'Correo',
+      redirecTo: '/correo',
+      icon: 'mail-outline'
     },
     {
       name: 'Solicitudes',

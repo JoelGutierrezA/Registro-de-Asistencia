@@ -12,14 +12,9 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },
-  {
     path: 'action-sheet',
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
   },
-
   {
     path: 'formulario',
     loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
@@ -31,6 +26,14 @@ const routes: Routes = [
   {
     path: 'isesion',
     loadChildren: () => import('./pages/isesion/isesion.module').then( m => m.IsesionPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'correo',
+    loadChildren: () => import('./pages/correo/correo.module').then( m => m.CorreoPageModule)
   },
 ];
 

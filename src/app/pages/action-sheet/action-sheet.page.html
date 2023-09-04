@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="MostrarMenu()">
-        <ion-icon slot="start" name="menu-outline" color="success"></ion-icon>
+        <ion-icon slot="start" name="menu-outline" color="warning"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Cursos</ion-title>
@@ -10,11 +10,55 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-text color="primary">
+  <ion-text color="medium">
     <h5>Seleccione un curso</h5>
   </ion-text>
-  <ion-button expand="full" routerLink="/cursos">Prog. App. Móviles (010V)</ion-button>
-  <ion-button expand="full">Prog. App. Móviles (013V)</ion-button>
-  <ion-button expand="full">Prog. App. Móviles (012V)</ion-button>
-  <ion-button expand="full">Arquitectura (019V)</ion-button>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Prog. Móvil (010V)</ion-label>
+      </ion-item>
+      <div class="cursos" slot="content">
+        <ion-button fill="clear">
+          Ver Curso
+        </ion-button>
+      </div>
+      <div class="cursos" slot="content">
+        <ion-button fill="clear" routerLink="/cursos">
+          Tomar Asistencia
+        </ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Prog. Móvil (012V)</ion-label>
+      </ion-item>
+      <div class="cursos" slot="content">
+        <ion-button fill="clear">
+          Ver Curso
+        </ion-button>
+      </div>
+      <div class="cursos" slot="content">
+        <ion-button fill="clear" routerLink="/cursos">
+          Tomar Asistencia
+        </ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Arquitectura (019V)</ion-label>
+      </ion-item>
+      <div class="cursos" slot="content">
+        <ion-button fill="clear">
+          Ver Curso
+        </ion-button>
+      </div>
+      <div class="cursos" slot="content">
+        <ion-button fill="clear" routerLink="/cursos">
+          Tomar Asistencia
+        </ion-button>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
 </ion-content>

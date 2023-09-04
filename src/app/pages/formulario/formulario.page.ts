@@ -16,8 +16,7 @@ export class FormularioPage implements OnInit {
     nombre:'',
     email:'',
     carrera: '',
-    edad:'',
-    password:''
+    detalle: '',
   }
 
   ngOnInit() {
@@ -30,7 +29,7 @@ export class FormularioPage implements OnInit {
   async MostrarMensaje() {
     const alert = await this.alertController.create({
       header: 'Gracias!',
-      message: 'Sus datos han sido enviados!',
+      message: 'Su solicitud ha sido enviada!',
       buttons: ['OK'],
     });
     await alert.present();
@@ -42,10 +41,6 @@ export class FormularioPage implements OnInit {
     this.usuario.nombre='';
     this.usuario.email='';
     this.usuario.carrera='';
-    this.usuario.edad='';
-    this.usuario.password='';
-
+    this.usuario.detalle='';
   }
-
-
 }
