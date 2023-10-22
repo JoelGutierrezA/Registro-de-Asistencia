@@ -36,6 +36,11 @@ export class AppComponent {
       redirecTo: '/formulario',
       icon: 'key-outline'
     },
+    {
+      name: 'Listar',
+      redirecTo: '/listar',
+      icon: 'key-outline'
+    },
   ]
 
 }

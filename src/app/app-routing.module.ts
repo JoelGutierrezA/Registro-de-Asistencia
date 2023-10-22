@@ -35,6 +35,14 @@ const routes: Routes = [
     path: 'correo',
     loadChildren: () => import('./pages/correo/correo.module').then( m => m.CorreoPageModule)
   },
+  {
+    path: 'listar',
+    loadChildren: () => import('./pages/listar/listar.module').then( m => m.ListarPageModule)
+  },
+  {
+    path: 'agregar',
+    loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
 ];
 
 @NgModule({

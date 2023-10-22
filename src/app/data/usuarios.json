@@ -1,0 +1,30 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "joe.gutierrez",
+      "nombre:": "Joel",
+      "apellido": "Gutiérrez",
+      "password": "Joel0906$",
+      "role": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "username": "jua.perez",
+      "nombre:": "Juan",
+      "apellido": "Perez",
+      "password": "Juan0906$",
+      "role": "docente",
+      "isactive": true
+    },
+    {
+      "id": 3,
+      "nombre": "Meigel",
+      "apellido": "Medrano",
+      "username": "mei.medrano",
+      "password": "asdf123",
+      "role": "alumno"
+    }
+  ]
+}
