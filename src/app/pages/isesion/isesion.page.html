@@ -3,28 +3,40 @@
   src="assets/duoc.png"
   alt="Logo Duoc"
   ></ion-img>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Iniciar Sesión</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <form #formulario="ngForm">
-        <ion-list>
-            <ion-item>
-              <ion-label position="floating">Email: </ion-label>
-              <ion-input type="email" placeholder="ju.perez@duocuc.cl"
-                    name="email" [(ngModel)]="sesion.email"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="floating">Password: </ion-label>
-              <ion-input type="password" placeholder="asdf1234"
-                    name="password" [(ngModel)]="sesion.password"></ion-input>
-            </ion-item>
-        </ion-list>
-        <ion-button routerLink="/home" expand="block" fill="solid" color="success" shape="round"
-        >Ingresar</ion-button>
-      </form>
-    </ion-card-content>
-  </ion-card>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-item>
+      <ion-label position="floating">Usuario: </ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+
+    <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+      <div style="color:red" *ngIf="loginForm.get('username')?.hasError('required')">
+        *Username es obligatorio
+      </div>
+      <div style="color:red" *ngIf="loginForm.get('username')?.hasError('minLength')">
+        *Username debe tener al menos 4 caracteres
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Password: </ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+      <div style="color:red" *ngIf="loginForm.get('password')?.hasError('required')">
+        *Password es obligatorio
+      </div>
+      <div style="color:red" *ngIf="loginForm.get('password')?.hasError('minLength')">
+        *Password debe tener al menos 8 caracteres
+      </div>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="login()" expand="block" color="primary" shape="round">Login</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
   <ion-button fill="clear" class="olvido" color="danger">¿Olvidaste tu contraseña?</ion-button>
 </ion-content>

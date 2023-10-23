@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { IsesionPageRoutingModule } from './isesion-routing.module';
 
 import { IsesionPage } from './isesion.page';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IsesionPageRoutingModule
+    IsesionPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [IsesionPage]
 })

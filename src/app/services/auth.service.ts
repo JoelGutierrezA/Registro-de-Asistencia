@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { User } from '../interfaces/interfaces';
+import { Users } from '../interfaces/interfaces';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,11 +12,11 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) { }
 
-  GetAllUsers():Observable<User>{
-    return this.httpClient.get<User>(`${environment.apiUrl}/usuarios`);
+  GetAllUsers():Observable<Users>{
+    return this.httpClient.get<Users>(`${environment.apiUrl}/usuarios`);
   }
-  GetUserById(codigo:any): Observable<User>{
-    return this.httpClient.get<User>(`${environment.apiUrl}/usuarios/?username=${codigo}`);
+  GetUserById(codigo:any): Observable<Users>{
+    return this.httpClient.get<Users>(`${environment.apiUrl}/usuarios/?username=${codigo}`);
   }
 
   IsLoggedIn() {

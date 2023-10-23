@@ -13,3 +13,8 @@ export interface Users{
     username: String;
     password: String;
 }
+
+export interface RespuestaTopHeadlines {
+    status: String;
+    totalResults: number;
+}

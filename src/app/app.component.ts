@@ -37,9 +37,9 @@ export class AppComponent {
       icon: 'key-outline'
     },
     {
-      name: 'Listar',
+      name: 'Usuarios',
       redirecTo: '/listar',
-      icon: 'key-outline'
+      icon: 'list-outline'
     },
   ]
 

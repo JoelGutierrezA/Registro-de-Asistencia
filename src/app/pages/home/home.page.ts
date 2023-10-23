@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from 'src/app/services/noticias.service';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -8,9 +9,13 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  constructor(private menuController: MenuController) { }
+  constructor(private menuController: MenuController,
+              private noticiasService: NoticiasService) { }
 
   ngOnInit() {
+      this.noticiasService.getTopHeadine().subscribe(resp =>{
+        console.log('noticias', resp);
+      });
   }
 
   MostrarMenu(){

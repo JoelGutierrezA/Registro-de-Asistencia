@@ -24,7 +24,17 @@
       "apellido": "Medrano",
       "username": "mei.medrano",
       "password": "asdf123",
-      "role": "alumno"
+      "role": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 5,
+      "nombre": "Martin",
+      "apellido": "Hermosilla",
+      "username": "Martin",
+      "password": "Martin123",
+      "role": "alumno",
+      "isactive": true
     }
   ]
 }
