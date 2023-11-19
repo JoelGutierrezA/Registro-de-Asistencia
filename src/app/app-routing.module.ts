@@ -13,18 +13,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'action-sheet',
-    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule),
-    canActivate: [AutorizadoGuard]
-  },
-  {
     path: 'formulario',
     loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule),
-    canActivate: [AutorizadoGuard]
-  },
-  {
-    path: 'cursos',
-    loadChildren: () => import('./pages/cursos/cursos.module').then( m => m.CursosPageModule),
     canActivate: [AutorizadoGuard]
   },
   {
@@ -48,8 +38,7 @@ const routes: Routes = [
   },
   {
     path: 'agregar',
-    loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule),
-    canActivate: [AutorizadoGuard]
+    loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
   },
   {
     path: 'detalle/:id',
@@ -57,13 +46,17 @@ const routes: Routes = [
     canActivate: [AutorizadoGuard]
   },
   {
-    path: 'actualizar/:id',
-    loadChildren: () => import('./pages/actualizar/actualizar.module').then( m => m.ActualizarPageModule),
-    canActivate: [AutorizadoGuard]
+    path: 'actualizar',
+    loadChildren: () => import('./pages/actualizar/actualizar.module').then( m => m.ActualizarPageModule)
   },
   {
     path: 'eliminar/:id',
     loadChildren: () => import('./pages/eliminar/eliminar.module').then( m => m.EliminarPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'asignatura',
+    loadChildren: () => import('./pages/asignatura/asignatura.module').then( m => m.AsignaturaPageModule),
     canActivate: [AutorizadoGuard]
   },
 ];

@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-action-sheet',
-  templateUrl: './action-sheet.page.html',
-  styleUrls: ['./action-sheet.page.scss'],
+  selector: 'app-asignatura',
+  templateUrl: './asignatura.page.html',
+  styleUrls: ['./asignatura.page.scss'],
 })
-
-export class ActionSheetPage implements OnInit {
+export class AsignaturaPage implements OnInit {
 
   constructor(private menuController: MenuController) { }
 
@@ -17,5 +16,6 @@ export class ActionSheetPage implements OnInit {
   MostrarMenu(){
     this.menuController.open('first');
   }
+
 
 }

@@ -35,4 +35,10 @@ export class AuthService {
       return false
     }
   }
+
+  logout() {
+    // Aquí realiza las operaciones para cerrar la sesión del usuario
+    // Por ejemplo, eliminar tokens, limpiar información de sesión, etc.
+    // Puedes usar localStorage.clear() o cualquier otro método según tu implementación de autenticación.
+  }
 }

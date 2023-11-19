@@ -15,6 +15,7 @@ interface Componente{
 export class AppComponent {
   constructor() {}
 
+
   componentes : Componente[] = [
     {
       name: 'Home',
@@ -23,11 +24,11 @@ export class AppComponent {
     },
     {
       name: 'Cursos',
-      redirecTo: '/action-sheet',
-      icon: 'library-outline'
+      redirecTo: '/asignatura',
+      icon: 'list-outline'
     },
     {
-      name: 'Correo',
+      name: 'Feriados',
       redirecTo: '/correo',
       icon: 'mail-outline'
     },

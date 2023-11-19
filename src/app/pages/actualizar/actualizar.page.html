@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Actualizar</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/listar"></ion-back-button>
+      <ion-back-button defaultHref="/isesion"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -15,23 +15,23 @@
   </ion-header>
   <form>
     <ion-item lines="full">
-      <ion-label position="floating">Nombre?:</ion-label>
-      <ion-input type="text" name="txtNombre" [(ngModel)]="usuario.nombre" placeholder="Cachupin" required></ion-input>
+      <ion-label position="floating">Nombre...</ion-label>
+      <ion-input type="text" name="txtNombre" [(ngModel)]="usuario.nombre" placeholder="Juan" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
-      <ion-label position="floating">Tipo Mascota?:</ion-label>
-      <ion-input type="text" name="txtTipo" [(ngModel)]="usuario.apellido"  placeholder="Perrito" required></ion-input>
+      <ion-label position="floating">Apellido...</ion-label>
+      <ion-input type="text" name="txtTipo" [(ngModel)]="usuario.apellido"  placeholder="Perez" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
-      <ion-label position="floating">Raza?:</ion-label>
-      <ion-input type="text" name="txtRaza" [(ngModel)]="usuario.username" placeholder="Pastor alemán.." required></ion-input>
+      <ion-label position="floating">Nombre de Usuario...</ion-label>
+      <ion-input type="text" name="txtRaza" [(ngModel)]="usuario.username" placeholder="Nombre de Usuario" required></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button (click)="updateAnimalito()" expand="block" color="success">Actualizar Mascota</ion-button>
+        <ion-button (click)="updateAnimalito()" expand="block" color="success">Actualizar Usuario</ion-button>
       </ion-col>
     </ion-row>
   </form>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NoticiasService } from 'src/app/services/noticias.service';
 import { MenuController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,9 @@ import { MenuController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   constructor(private menuController: MenuController,
-              private noticiasService: NoticiasService) { }
+              private router: Router,
+              private noticiasService: NoticiasService,
+              private authService: AuthService) { }
 
   ngOnInit() {
       this.noticiasService.getTopHeadine().subscribe(resp =>{
@@ -22,4 +26,13 @@ export class HomePage implements OnInit {
     this.menuController.open('first');
   }
 
+  logout() {
+    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('userrole');
+    sessionStorage.removeItem('ingresado');
+
+    // Redirige al usuario a la página de inicio de sesión o a la página principal
+    this.router.navigate(['/inicio']);
+    this.authService.logout(); 
+  }
 }

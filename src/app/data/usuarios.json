@@ -35,6 +35,24 @@
       "password": "Martin123",
       "role": "alumno",
       "isactive": true
+    },
+    {
+      "id": 6,
+      "nombre": "sebastian",
+      "apellido": "silva",
+      "username": "sebastian09",
+      "password": "silva0906",
+      "role": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 7,
+      "nombre": "vivi",
+      "apellido": "lopez",
+      "username": "profevivi",
+      "password": "vivi0906",
+      "role": "docente",
+      "isactive": true
     }
   ]
 }
