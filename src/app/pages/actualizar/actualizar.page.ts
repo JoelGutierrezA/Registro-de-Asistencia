@@ -14,6 +14,7 @@ export class ActualizarPage implements OnInit {
     nombre:"",
     apellido:"",
     username:"",
+    password: "",
     role:""
   }
 
@@ -38,19 +39,20 @@ export class ActualizarPage implements OnInit {
 
   getUsuarioById(animalitoID:number){
     this.apiCrud.BuscarUsuarioId(animalitoID).subscribe(
-      (resp:any)=>{                 //resp llega en formato de arreglo de un objeto 
+      (resp:any)=>{              
         this.usuario={
           id: resp[0].id,
           nombre: resp[0].nombre,
           apellido: resp[0].apellido,
           username: resp[0].username,
+          password: resp[0].password,
           role: resp[0].role
         }
       }
     )
   }
 
-  updateAnimalito(){
+  updateUsuario(){
       this.apiCrud.ActualizarUsuario(this.usuario).subscribe();
       this.router.navigateByUrl("/listar");
   }

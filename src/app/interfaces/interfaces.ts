@@ -18,3 +18,14 @@ export interface RespuestaTopHeadlines {
     status: String;
     totalResults: number;
 }
+
+export interface IPalabra{
+    palabra: String;
+    username: String;
+}
+
+export interface IPalabras{
+    id:number;
+    palabra: String;
+    username: String;
+}

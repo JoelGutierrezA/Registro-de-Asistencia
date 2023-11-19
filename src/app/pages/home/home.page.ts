@@ -33,6 +33,5 @@ export class HomePage implements OnInit {
 
     // Redirige al usuario a la página de inicio de sesión o a la página principal
     this.router.navigate(['/inicio']);
-    this.authService.logout(); 
   }
 }

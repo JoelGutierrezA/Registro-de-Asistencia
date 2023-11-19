@@ -14,8 +14,8 @@
   </div>
   <div class="lista">
     <ion-list>
-      <ion-item *ngFor="let a of usuarios; let i=index">  <!--url/animalitos/id-->
-        <ion-label>{{a['nombre']}} &nbsp; {{a['apellido']}} </ion-label>
+      <ion-item *ngFor="let a of usuarios; let i=index" [routerLink]="['/detalle', a.id]"> 
+        <ion-label>{{a['apellido']}} &nbsp; {{a['username']}} </ion-label>
       </ion-item>
     </ion-list>
   </div>

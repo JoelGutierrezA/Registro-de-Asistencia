@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Detalle de Animalito</ion-title>
+    <ion-title>Detalle de Usuarios</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/listar"></ion-back-button>
     </ion-buttons>
@@ -10,12 +10,13 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
+      <ion-card-title>Nombre: {{usuario.nombre}}</ion-card-title>
+      <ion-card-title>Apellido: {{usuario.apellido}}</ion-card-title>
       <ion-card-subtitle>ID #{{usuario.id}}</ion-card-subtitle>
-      <ion-card-title>Nombre:{{usuario.nombre}} </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <span>Raza:{{usuario.apellido}} </span>
-      <span>Raza:{{usuario.role}} </span>
+      <span>Usuario: {{usuario.username}} </span>
+      <span>Role: {{usuario.role}} </span>
     </ion-card-content>
     <ion-button [routerLink]="['/actualizar', usuario.id]"color="warning"> 
       <ion-icon name="create"></ion-icon> </ion-button>

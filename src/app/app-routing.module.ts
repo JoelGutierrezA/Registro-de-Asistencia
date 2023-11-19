@@ -59,6 +59,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/asignatura/asignatura.module').then( m => m.AsignaturaPageModule),
     canActivate: [AutorizadoGuard]
   },
+  {
+    path: 'qr',
+    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule),
+    canActivate: [AutorizadoGuard]
+  },
 ];
 
 @NgModule({

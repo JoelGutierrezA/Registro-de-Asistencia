@@ -54,5 +54,32 @@
       "role": "docente",
       "isactive": true
     }
+  ],
+  "alumnos": [
+    {
+      "id": 1,
+      "nombre": "Joel",
+      "apellido": "Gutiérrez",
+      "username": "joel0906",
+      "passsword": "asdf123",
+      "isactive": true
+    }
+  ],
+  "palabras": [
+    {
+      "id": 1,
+      "palabra": "Hakuna Matata",
+      "username": "cachupin"
+    },
+    {
+      "palabra": "duoc maipu",
+      "username": "cachupin",
+      "id": 2
+    },
+    {
+      "palabra": "hola",
+      "username": "jua.perez",
+      "id": 3
+    }
   ]
 }
